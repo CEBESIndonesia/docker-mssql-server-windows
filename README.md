@@ -9,7 +9,7 @@ When ```attach_dbs``` is specified it will not automate, it will respect the ```
 
 The only thing you need to do, is to make a shared volume, and make sure it is named ```C:\Databases``` on the container side.
 
-When ```attach_dbs``` is omitted the original database names are not used, the name of the db will be the same as de filenames of the ```mdf``` files. Mostly this will be the case, so not really a problem I think.
+When ```attach_dbs``` is omitted the original database names are not used, the name of the db will be the same as de filenames (without extension) of the ```mdf``` files. Mostly this will be the case, so not really a problem I think.
 
 Make sure the chosen password is according to SQL Server password policy, otherwise connecting to SQL Server will fail.
 
