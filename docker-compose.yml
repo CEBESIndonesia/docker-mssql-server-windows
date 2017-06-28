@@ -1,0 +1,19 @@
+version: '2.1'
+
+services:
+  db:
+    image: cebes/mssql-server-windows
+    environment:
+      sa_password: "cCH4qFSfg47reuzB"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - c:\databases\:c:\databases\
+    ports:
+      - "1433:1433"
+    networks:
+      - nat
+
+networks:
+  nat:
+    external:
+      name: nat
